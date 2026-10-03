@@ -1,0 +1,189 @@
+/* ProjectVideoModal.css */
+.project-video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .project-video-modal {
+    padding: 1.5rem;
+  }
+}
+
+.project-video-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(7, 11, 20, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+}
+
+.project-video-modal__content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 56rem; /* 896px */
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: #0b1220;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 229, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbar for modal content if overflowing */
+.project-video-modal__content::-webkit-scrollbar {
+  width: 6px;
+}
+.project-video-modal__content::-webkit-scrollbar-track {
+  background: #070b14;
+}
+.project-video-modal__content::-webkit-scrollbar-thumb {
+  background: #1f293d;
+  border-radius: 3px;
+}
+
+.project-video-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (min-width: 640px) {
+  .project-video-modal__header {
+    padding: 1.5rem 2rem;
+  }
+}
+
+.project-video-modal__label {
+  display: inline-block;
+  font-size: 0.6875rem; /* 11px */
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #00e5ff;
+  background-color: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-video-modal__title {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f5f7fa;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .project-video-modal__title {
+    font-size: 1.5rem;
+  }
+}
+
+.project-video-modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  color: #94a3b8;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.project-video-modal__close:hover {
+  background-color: #ffffff;
+  color: #070b14;
+  border-color: #ffffff;
+  transform: scale(1.05);
+}
+
+.project-video-modal__video-container {
+  width: 100%;
+  background-color: #05080f;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-video-modal__video {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.project-video-modal__details {
+  padding: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .project-video-modal__details {
+    padding: 1.75rem 2rem;
+  }
+}
+
+.project-video-modal__project-heading {
+  margin: 0 0 0.5rem 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.project-video-modal__desc {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+.project-video-modal__tech-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-video-modal__tech-label {
+  font-size: 0.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.project-video-modal__tech-line {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}

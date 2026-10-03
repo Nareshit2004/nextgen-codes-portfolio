@@ -1,0 +1,32 @@
+{
+  "name": "nextgen-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.84.0",
+    "@react-three/fiber": "^8.15.2",
+    "@splinetool/react-spline": "^4.1.0",
+    "@splinetool/runtime": "^2.0.65",
+    "framer-motion": "^11.2.6",
+    "lucide-react": "^0.292.0",
+    "motion": "^14.0.0",
+    "ogl": "^1.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.2.0"
+  }
+}
