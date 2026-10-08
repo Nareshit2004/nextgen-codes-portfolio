@@ -91,17 +91,30 @@ export default function ProjectVideoModal({
 
         {/* Video Player */}
         <div className="project-video-modal__video-container">
-          <video
-            ref={videoRef}
-            className="project-video-modal__video"
-            controls
-            playsInline
-            preload="metadata"
-            poster={poster}
-          >
-            <source src={videoSrc} type="video/mp4" />
-            Your browser does not support video playback.
-          </video>
+          {(() => {
+            const resolveAssetPath = (path) => {
+              if (!path) return path;
+              if (path.startsWith('http://') || path.startsWith('https://')) return path;
+              const base = import.meta.env.BASE_URL || '/';
+              if (path.startsWith('/')) {
+                return `${base}${path.slice(1)}`;
+              }
+              return `${base}${path}`;
+            };
+            return (
+              <video
+                ref={videoRef}
+                className="project-video-modal__video"
+                controls
+                playsInline
+                preload="metadata"
+                poster={resolveAssetPath(poster)}
+              >
+                <source src={resolveAssetPath(videoSrc)} type="video/mp4" />
+                Your browser does not support video playback.
+              </video>
+            );
+          })()}
         </div>
 
         {/* Project Details Below Video */}

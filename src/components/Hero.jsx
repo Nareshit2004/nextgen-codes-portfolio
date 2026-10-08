@@ -67,22 +67,64 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Main Portrait Container */}
-          <div className="relative w-[300px] h-[400px] sm:w-[400px] sm:h-[500px] rounded-[2rem] overflow-hidden glass-panel p-2 shadow-2xl shadow-black/50">
-            <div className="absolute inset-0 bg-gradient-to-tr from-accent-cyan/10 to-transparent opacity-50 z-10 pointer-events-none rounded-[2rem]"></div>
-            <img 
-              src="/images/portrait.png" 
-              alt="NextGen Codes Founder" 
-              className="w-full h-full object-cover rounded-[1.5rem] filter contrast-125 saturate-110"
-            />
-            <div className="absolute bottom-4 left-4 right-4 glass-pill px-4 py-3 flex items-center justify-between z-20">
+          {/* Main Developer Visual Container */}
+          <div className="relative w-[300px] h-[400px] sm:w-[400px] sm:h-[500px] rounded-[2rem] overflow-hidden glass-panel p-6 shadow-2xl shadow-black/50 flex flex-col justify-between border border-white/10 bg-studio-800/70 backdrop-blur-xl">
+            <div className="absolute inset-0 bg-gradient-to-tr from-accent-cyan/10 via-transparent to-accent-orange/5 opacity-60 pointer-events-none rounded-[2rem]"></div>
+            
+            {/* Top Terminal Bar */}
+            <div className="flex items-center justify-between pb-3 border-b border-white/5 relative z-20">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-accent-orange/80"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+              </div>
+              <span className="text-[11px] font-mono text-content-muted tracking-wider">
+                nextgen.config.ts
+              </span>
+            </div>
+
+            {/* Code / Developer Identity Visual */}
+            <div className="font-mono text-xs leading-relaxed space-y-2 py-2 text-content-secondary relative z-20 overflow-hidden">
+              <p className="text-accent-cyan/80">
+                <span className="text-purple-400">const</span> developer = &#123;
+              </p>
+              <p className="pl-4">
+                <span className="text-content-muted">name:</span> <span className="text-emerald-300">"Naresh Kumar"</span>,
+              </p>
+              <p className="pl-4">
+                <span className="text-content-muted">role:</span> <span className="text-accent-cyan">"Software Developer"</span>,
+              </p>
+              <p className="pl-4">
+                <span className="text-content-muted">skills:</span> [
+              </p>
+              <p className="pl-8 text-amber-200/90 text-[11px]">
+                "AWS", "AI & ML", "Web Dev", "SQL"
+              </p>
+              <p className="pl-4">],</p>
+              <p className="pl-4">
+                <span className="text-content-muted">status:</span> <span className="text-green-400">"Available"</span>
+              </p>
+              <p className="text-accent-cyan/80">&#125;;</p>
+
+              <div className="pt-2 flex items-center gap-2 text-[10px] text-content-muted border-t border-white/5">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span className="text-content-secondary">System Online • Ready to build</span>
+              </div>
+            </div>
+
+            {/* Bottom Status Card */}
+            <div className="glass-pill px-4 py-3 flex items-center justify-between z-20 relative border border-white/10">
               <div>
                 <p className="text-xs font-medium text-white">Naresh Kumar</p>
                 <p className="text-[10px] text-accent-cyan">Software / Web Developer</p>
               </div>
               <div className="flex gap-1">
-                {[1, 2, 3].map(i => (
-                  <div key={i} className="w-1 h-3 bg-accent-cyan rounded-full animate-pulse" style={{ animationDelay: `${i * 150}ms` }}></div>
+                {[1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="w-1 h-3 bg-accent-cyan rounded-full animate-pulse"
+                    style={{ animationDelay: `${i * 150}ms` }}
+                  ></div>
                 ))}
               </div>
             </div>

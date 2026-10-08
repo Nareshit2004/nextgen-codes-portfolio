@@ -17,7 +17,7 @@ import Particles from './components/Particles';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="font-sans antialiased text-content-primary bg-studio-900 min-h-screen relative">
         {/* Full-site fixed WebGL particle background */}
         <div className="site-particles-background">
